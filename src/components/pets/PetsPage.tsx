@@ -1,6 +1,5 @@
 import React, {FC, useState} from 'react'
 import { useNavigate } from 'react-router-dom'
-import PetItemPage from './PetItemPage'
 
 const PetsPage = () => {
     const [petId, setPetId] = useState('')
