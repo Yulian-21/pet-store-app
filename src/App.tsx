@@ -1,24 +1,20 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import PetsPage from './components/PetsPage';
+import {NavLink, Route, Routes} from 'react-router-dom';
+import PetItemPage from './components/PetItemPage';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div>
+         <NavLink to='/pets'>Pets</NavLink>
+      </div>
+      <Routes>
+      <Route element={<PetsPage />} path={'/pets'} />
+      <Route element={<PetItemPage />} path={'/pets/:id'} />
+      </Routes>
     </div>
   );
 }
