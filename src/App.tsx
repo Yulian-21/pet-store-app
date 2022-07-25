@@ -1,10 +1,7 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import PetsPage from './components/pets/PetsPage';
+import PetsPage from './components/Pets/PetsPage';
 import {Route, Routes, useLocation} from 'react-router-dom';
-import PetItemPage from './components/pets/PetItemPage';
-import Navigation from './components/navigation/Navigation';
+import PetItemPage from './components/Pets/PetItemPage';
+import Navigation from './components/Navigation/Navigation';
 
 function App() {
   return (
