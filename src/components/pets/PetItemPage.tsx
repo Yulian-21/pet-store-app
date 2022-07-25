@@ -1,7 +1,7 @@
 import React, {FC, useEffect, useState} from 'react'
 import axios from 'axios'
 import {useParams, useNavigate} from 'react-router-dom'
-import { IPet } from '../types/types'
+import { IPet } from '../../types/types'
 
 type PetItemPageParams = {
   id: string
@@ -41,10 +41,13 @@ const PetItemPage: FC = () => {
             }
           </ul>
           {pet?.id}. {pet?.name} {pet?.status}
+
+          <h3>Tags: </h3>
+          
            <ul>
             {
               pet?.tags.map(tag => (
-                <li key={tag.id}>Tags: {tag.name}</li>
+                <li key={tag.id}> {tag.name}</li>
               ))
             }
            </ul>
