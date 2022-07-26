@@ -1,16 +1,19 @@
 import PetsPage from './components/Pets/PetsPage';
-import {Route, Routes, useLocation} from 'react-router-dom';
+import {Route, Routes} from 'react-router-dom';
 import PetItemPage from './components/Pets/PetItemPage';
 import Navigation from './components/Navigation/Navigation';
 import StorePage from './components/Orders/StorePage';
 import OrderItem from './components/Orders/OrderItem/OrderItem';
 import UsersPage from './components/Users/UsersPage';
+import './App.css'
+import Header from './components/Header/Header';
 
 function App() {
   return (
-    <div>
+    <div className='app-wrapper'>
+      <Header />
       <Navigation />
-      <div>
+      <div className="app-wrapper-content">
       <Routes>
       <Route element={<PetsPage />} path={'/pets'} />
       <Route element={<PetItemPage />} path={'/pets/:id'} />

@@ -1,6 +1,7 @@
 import React, {FC, useState} from 'react'
 import axios from 'axios';
 import IUser from './UserType/UserType';
+import { promisify } from '../Api/UserResponse';
 
 const UsersPage = () => {
 
@@ -48,9 +49,9 @@ const UsersPage = () => {
 
     const sendUser = async () => {
           await  axios.post<IUser>("https://petstore3.swagger.io/api/v3/user", user
-          ).then(response=> {
+          ).then(response => {
             alert(response.data)
-          }).catch(err => {alert(err.message)});
+          }).catch(err => { alert(err.message)})
     }
   return (
     <div>
