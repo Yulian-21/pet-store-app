@@ -1,7 +1,9 @@
 import axios from 'axios'
 import React, {FC, useCallback, useEffect, useState} from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import { IOrder, IPet } from '../../../types/types'
+import { IPet } from '../../Pets/PetTypes/PetTypes'
+import { IOrder } from '../OrderType/OrderType'
+
 
 type OrderItemPageParams = {
     id: string

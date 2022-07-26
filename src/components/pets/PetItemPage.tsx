@@ -1,9 +1,10 @@
 import React, {FC, useEffect, useState} from 'react'
 import axios from 'axios'
 import {useParams, useNavigate} from 'react-router-dom'
-import { IPet } from '../../types/types'
+import { IPet } from './PetTypes/PetTypes'
 
-type PetItemPageParams = {
+type PetItemPageParams =
+ {
   id: string
 }
 
@@ -36,7 +37,9 @@ const PetItemPage: FC = () => {
           <ul>
             {
               pet?.photoUrls.map((image, index) => (
-                <li key={index}><img src={image}></img></li>
+                <li key={index}> 
+                <img src={image}/>
+                </li>
               ))
             }
           </ul>
