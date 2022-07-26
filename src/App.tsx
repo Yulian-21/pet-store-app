@@ -7,6 +7,7 @@ import OrderItem from './components/Orders/OrderItem/OrderItem';
 import UsersPage from './components/Users/UsersPage';
 import './App.css'
 import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Route element={<UsersPage />} path={'/users'} />
       </Routes>
       </div>
+      <Footer />
     </div>
   );
 }
