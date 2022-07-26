@@ -2,10 +2,11 @@ import React, {FC, useState} from 'react'
 import axios from 'axios';
 import IUser from './UserType/UserType';
 import { promisify } from '../Api/UserResponse';
+import './UserPage.module.css'
 
 const UsersPage = () => {
 
-    const [user, setUser] = useState<IUser>(  { id: 0,
+    const [user, setUser] = useState<IUser>(  { 
         userName: '',
         firstName: '',
         lastName: '',
@@ -14,9 +15,7 @@ const UsersPage = () => {
         phone: '',
         userStatus: 0});
 
-        const changeIdHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-            setUser({...user, id: parseInt(e.target.value, 10)});
-        }
+        
 
         const changeUserNameHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
             setUser({...user, userName: e.target.value});
@@ -56,14 +55,27 @@ const UsersPage = () => {
   return (
     <div>
         <form>
-          <input type="number" id="id" name="id" onChange={changeIdHandler} placeholder='id'/>
-          <input type="text" id="userName" name="userName" onChange={changeUserNameHandler} placeholder='userName'/>
-          <input type="text" id="firstName" name="firstName" onChange={changeFirstNameHandler} placeholder='firstName'/>
-          <input type="text" id="lastName" name="lastName" onChange={changeLastNameHandler} placeholder='lastName'/>
-          <input type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" name="email" onChange={changeEmailHandler} placeholder='email'/>
-          <input type="password" id="password" name="password" onChange={changePasswordHandler} placeholder='password'/>
-          <input type="tel" id="phone" name="phone" onChange={changePhoneHandler} placeholder='phone'/>
-          <input type="number" id="userStatus" name="userStatus" onChange={changeStatusHandler} placeholder='userStatus'/>
+          <label htmlFor='userName'>Login</label>
+          <input type="text" id="userName" name="userName" onChange={changeUserNameHandler} placeholder='Your Username'/>
+
+          <label htmlFor='firstName'>First Name</label>
+          <input type="text" id="firstName" name="firstName" onChange={changeFirstNameHandler} placeholder='Your First Name'/>
+
+          <label htmlFor='lastName'>Last Name</label>
+          <input type="text" id="lastName" name="lastName" onChange={changeLastNameHandler} placeholder='Your Last Name'/>
+
+          <label htmlFor='email'>Email</label>
+          <input type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" name="email" onChange={changeEmailHandler} placeholder='Your Email'/>
+
+          <label htmlFor='password'>Password</label>
+          <input type="password" id="password" name="password" onChange={changePasswordHandler} placeholder='Your Password'/>
+
+          <label htmlFor='phone'>Phone Number</label>
+          <input type="tel" id="phone" name="phone" onChange={changePhoneHandler} placeholder='Your Phone Number'/>
+
+          <label htmlFor='userStatus'> Status</label>
+          <input type="number" id="userStatus" name="userStatus" onChange={changeStatusHandler} placeholder='Your Status'/>
+
           <button onClick={sendUser}>Submit</button>
         </form>
     </div>
