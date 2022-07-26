@@ -1,17 +1,18 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import n from './Navigation.module.css'
 
 const Navigation = () => {
   return (
-    <nav>
-    <div>
-        <NavLink to='/pets'>Pets</NavLink>
+    <nav className={n.nav}>
+    <div className={`${n.fontStyle}`} >
+        <NavLink className={navData => navData.isActive ? n.active : n.fontStyle} to='/pets'>Pets</NavLink>
     </div>
-    <div> 
-        <NavLink to='/orders'>Orders</NavLink>
+    <div className={`${n.fontStyle}`} > 
+        <NavLink className={navData => navData.isActive ? n.active : n.fontStyle} to='/orders'>Orders</NavLink>
     </div>
-    <div>
-      <NavLink to='/users'>Users</NavLink>
+    <div className={`${n.fontStyle}`} >
+      <NavLink className={navData => navData.isActive ? n.active : n.fontStyle} to='/users'>Users</NavLink>
     </div>
     </nav>
   )
