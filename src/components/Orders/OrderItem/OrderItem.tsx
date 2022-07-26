@@ -38,15 +38,14 @@ const OrderItem: FC = () => {
    useEffect(() => {
     getData();
    }, [order])
-  
+ 
     return (
       <div>
         <h1> The data page of order №{order?.id} name {pet?.name}  </h1>
          <div>
             <div>Pet Id: {order?.petId}, quantity: {order?.quantity}</div>
             <div>Order Status: {order?.status} Ship Date: {order?.shipDate}</div>
-            <div>Category: {pet?.category.name}</div>
-            Completed: <input type="checkbox" checked={order?.complete} />
+            <div>Completed: <input type="checkbox" checked={order?.complete} /></div>
          </div>
          
           <button onClick={() => history('/orders')}> Return</button>
