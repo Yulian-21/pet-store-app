@@ -1,0 +1,13 @@
+.nav{
+    grid-area: n;
+    background-color: lightgreen;
+    }
+  
+  .fontStyle a
+  {
+    color: black
+  }
+  
+  .fontStyle a.active {
+    color: white;
+    }
