@@ -10,13 +10,14 @@
     grid-template-rows: 80px 1fr 110px;
     grid-template-columns: 2fr 10fr 1fr;
     grid-gap:10px;
-    background-color:lightgreen;
+    background-color:white;
   }
 
   .app-wrapper-content{
     grid-area: c;
-    background-color: black;
-    color: lightgreen;
+    background-color: lightgreen;
+    color: white;
+    height: 800px;
     }
     .app-wrapper-content img{
       width:200px;
