@@ -1,12 +1,8 @@
 import React, {FC, useEffect, useState} from 'react'
 import axios from 'axios'
 import {useParams, useNavigate} from 'react-router-dom'
-import { IPet } from '../PetTypes/PetTypes'
+import { IPet, PetItemPageParams } from '../PetTypes/PetTypes'
 
-type PetItemPageParams =
- {
-  id: string
-}
 
 const PetItemPage: FC = () => {
 

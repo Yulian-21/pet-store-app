@@ -16,3 +16,8 @@ export interface IPet{
     tags: Array<ITag>,
     status: string,
 }
+
+export type PetItemPageParams =
+ {
+  id: string
+}
