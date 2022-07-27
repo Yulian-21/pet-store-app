@@ -6,7 +6,8 @@ const StorePage: FC = () => {
     const navigation = useNavigate()
   return (
     <div>
-        <input type="text" value={orderId} onChange={(changing) => setOrderId(changing.target.value)}/>
+        <label htmlFor='id'>Id of Order</label>
+        <input type="text" value={orderId} id="id" onChange={(changing) => setOrderId(changing.target.value)} placeholder="Your Id"/>
         <button onClick={() => navigation('/orders/' + orderId)}>Show</button>
     </div>
   )
