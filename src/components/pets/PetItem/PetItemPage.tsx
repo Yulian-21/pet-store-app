@@ -26,7 +26,7 @@ const PetItemPage: FC = () => {
   return (
     <div>
       <h1> The page of {pet?.name} </h1>
-      <button onClick={() => history('/pets')}> Return</button>
+      
         <div>
           <ul>
             {
@@ -48,6 +48,7 @@ const PetItemPage: FC = () => {
             }
            </ul>
         </div>
+        <button onClick={() => history('/pets')}> Return</button>
     </div>
   )
 }
