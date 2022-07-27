@@ -26,6 +26,10 @@ export type PetByTagParams = {
     tag: string
 }
 
+export type PetByStatusParams = {
+    status: string
+}
+
 export enum Status{
     Available= "available",
     Pending="pending",
