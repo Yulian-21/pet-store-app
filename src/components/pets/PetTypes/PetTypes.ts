@@ -21,3 +21,7 @@ export type PetItemPageParams =
  {
   id: string
 }
+
+export type PetByTagParams = {
+    tag: string
+}
