@@ -1,18 +1,18 @@
 export interface ICategory{
     id: number;
-    name: string
+    name: string;
 }
 
 export interface ITag{
-    id: number
-    name: string
+    id: number,
+    name: string,
 }
 
 export interface IPet{
-    id: number
-    name: string
+    id: number,
+    name: string,
     category: ICategory
     photoUrls: Array<string>
-    tags: Array<ITag>
-    status: string
+    tags: Array<ITag>,
+    status: string,
 }

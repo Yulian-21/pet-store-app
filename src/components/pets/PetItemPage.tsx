@@ -36,22 +36,21 @@ const PetItemPage: FC = () => {
         <div>
           <ul>
             {
-              pet?.photoUrls.map((image, index) => (
+              pet?.photoUrls?.map((image, index) => (
                 <li key={index}> 
                 <img src={image}/>
                 </li>
               ))
             }
           </ul>
-          {pet?.id}. {pet?.name} {pet?.category.name} {pet?.status}
+          <div>{pet?.id}. {pet?.name} {pet?.category?.name} {pet?.status}</div>
 
           <h3>Tags: </h3>
           
            <ul>
             {
-              pet?.tags.map(tag => (
-                <li key={tag.id}> {tag.name}</li>
-              ))
+                pet?.tags?.map(tag => (
+                  <li key={tag?.id}> {tag?.name}</li>))
             }
            </ul>
         </div>
