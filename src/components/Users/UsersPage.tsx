@@ -76,7 +76,7 @@ const UsersPage = () => {
           <label htmlFor='userStatus'> Status</label>
           <input type="number" id="userStatus" name="userStatus" onChange={changeStatusHandler} placeholder='Your Status'/>
 
-          <button onClick={sendUser}>Submit</button>
+          <button onClick={sendUser}>Register</button>
         </form>
     </div>
   )
