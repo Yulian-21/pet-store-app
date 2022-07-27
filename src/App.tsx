@@ -1,6 +1,6 @@
 import PetsPage from './components/Pets/PetsPage';
 import {Route, Routes} from 'react-router-dom';
-import PetItemPage from './components/Pets/PetItemPage';
+import PetItemPage from './components/Pets/PetItem/PetItemPage';
 import Navigation from './components/Navigation/Navigation';
 import StorePage from './components/Orders/StorePage';
 import OrderItem from './components/Orders/OrderItem/OrderItem';
