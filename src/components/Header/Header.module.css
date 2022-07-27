@@ -1,7 +1,9 @@
 
 .header{
     grid-area: h;
-    background-color: lightgreen;
+    background-color: #7ee8fa;
+    background-image: linear-gradient(315deg, #7ee8fa 0%, #80ff72 74%);
+
     }
     .header img {
       width: 80px;

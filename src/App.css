@@ -1,6 +1,7 @@
 .app-wrapper{
     display: grid;
-    width: 1200px;
+    width: 99vw;
+    border-left: none;
     grid-template-areas: 
     "h h h"
     "n c c"
@@ -15,7 +16,9 @@
 
   .app-wrapper-content{
     grid-area: c;
-    background-color: lightgreen;
+    background-color: #7ee8fa;
+background-image: linear-gradient(315deg, #7ee8fa 0%, #80ff72 74%);
+
     color: black;
     height: 800px;
     }
