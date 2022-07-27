@@ -9,6 +9,7 @@ import './App.css'
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import PetsByTagPage from './components/Pets/PetsByTag/PetsByTagPage';
+import PetByStatus from './components/Pets/PetByStatus/PetByStatus';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <Route element={<OrderItem />} path={'/orders/:id'} />
       <Route element={<UsersPage />} path={'/users'} />
       <Route element={<PetsByTagPage/>} path={'/pets/byTag/:tag'} />
+      <Route element={<PetByStatus />} path={'/pets/byStatus/:status'} />
       </Routes>
       </div>
       <Footer />
