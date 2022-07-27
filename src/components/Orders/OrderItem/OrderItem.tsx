@@ -45,7 +45,9 @@ const OrderItem: FC = () => {
          <div>
             <div>Pet Id: {order?.petId}, quantity: {order?.quantity}</div>
             <div>Order Status: {order?.status} Ship Date: {order?.shipDate}</div>
-            <div>Completed: <input type="checkbox" checked={order?.complete} /></div>
+            <div>
+              Completed: <input type="checkbox" checked={order?.complete} />
+              </div>
          </div>
          
           <button onClick={() => history('/orders')}> Return</button>
