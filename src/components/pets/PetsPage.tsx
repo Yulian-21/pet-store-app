@@ -15,8 +15,8 @@ const PetsPage: FC = () => {
         </div>
         <div>
         <label htmlFor="petTag">Interests you Tag</label>
-        <input type="text" value={petId} id="petTag" onChange={(changing) => setPetId(changing.target.value)} placeholder="Tag"/>
-        <button onClick={() => navigation('/pets/' + petTag)}>Show</button>
+        <input type="text" value={petTag} id="petTag" onChange={(changing) => setPetTag(changing.target.value)} placeholder="Tag"/>
+        <button onClick={() => navigation('/pets/tag/' + petTag)}>Show</button>
         </div>
     </div>
   )

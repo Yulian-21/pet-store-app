@@ -8,6 +8,7 @@ import UsersPage from './components/Users/UsersPage';
 import './App.css'
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import PetsByTagPage from './components/Pets/PetsByTag/PetsByTagPage';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Route element={<StorePage />} path={'/orders'} />
       <Route element={<OrderItem />} path={'/orders/:id'} />
       <Route element={<UsersPage />} path={'/users'} />
+      <Route element={<PetsByTagPage/>} path={'/pets/byTag/:tag'} />
       </Routes>
       </div>
       <Footer />
