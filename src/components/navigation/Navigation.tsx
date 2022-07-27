@@ -14,7 +14,7 @@ const Navigation = () => {
     <div className={`${n.fontStyle}`} >
       <NavLink className={navData => navData.isActive ? n.active : n.fontStyle} to='/users'>Users</NavLink>
     </div>
-    <div>
+    <div className={`${n.fontStyle}`}>
       <NavLink className={navData => navData.isActive ? n.active : n.fontStyle} to='/about'>About</NavLink>
     </div>
     </nav>
