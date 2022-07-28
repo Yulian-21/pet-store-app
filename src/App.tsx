@@ -1,7 +1,6 @@
 import PetsPage from './components/Pets/PetsPage';
 import {Route, Routes} from 'react-router-dom';
 import PetItemPage from './components/Pets/PetItem/PetItemPage';
-import Navigation from './components/Navigation/Navigation';
 import StorePage from './components/Orders/StorePage';
 import OrderItem from './components/Orders/OrderItem/OrderItem';
 import UsersPage from './components/Users/UsersPage';
@@ -15,7 +14,6 @@ function App() {
   return (
     <div className='app-wrapper'>
       <Header />
-      <Navigation />
       <div className="app-wrapper-content">
       <Routes>
       <Route element={<PetsPage />} path={'/pets'} />
