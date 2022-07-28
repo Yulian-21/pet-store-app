@@ -2,7 +2,6 @@ import * as React from "react";
 import {
     useForm,
     UseFormReturn,
-    SubmitHandler,
     UseFormProps,
     FormProvider,
     FieldValues
