@@ -4,6 +4,7 @@ import IUser from './UserType/UserType';
 import { promisify } from '../Api/UserResponse';
 import './UserPage.module.css'
 
+
 const UsersPage = () => {
 
     const [user, setUser] = useState<IUser>(  { 
@@ -14,36 +15,6 @@ const UsersPage = () => {
         password: '',
         phone: '',
         userStatus: 0});
-
-        
-
-        const changeUserNameHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-            setUser({...user, userName: e.target.value});
-        }
-
-        const changeFirstNameHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-            setUser({...user, firstName: e.target.value});
-        }
-
-        const changeLastNameHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-            setUser({...user, lastName: e.target.value});
-        }
-
-        const changeEmailHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-            setUser({...user, email: e.target.value});
-        }
-
-        const changePasswordHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-            setUser({...user, password: e.target.value});
-        }
-
-        const changePhoneHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-            setUser({...user, phone: e.target.value});
-        }
-
-        const changeStatusHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-            setUser({...user, userStatus: parseInt(e.target.value, 10)});
-        }
 
 
     const sendUser = async () => {
@@ -56,25 +27,25 @@ const UsersPage = () => {
     <div>
         <form>
           <label htmlFor='userName'>Login</label>
-          <input type="text" id="userName" name="userName" onChange={changeUserNameHandler} placeholder='Your Username'/>
+          <input type="text" id="userName" name="userName" onChange={(event) => setUser({...user, userName: event.target.value})} placeholder='Your Username'/>
 
           <label htmlFor='firstName'>First Name</label>
-          <input type="text" id="firstName" name="firstName" onChange={changeFirstNameHandler} placeholder='Your First Name'/>
+          <input type="text" id="firstName" name="firstName" onChange={(event) => setUser({...user, firstName: event.target.value})} placeholder='Your First Name'/>
 
           <label htmlFor='lastName'>Last Name</label>
-          <input type="text" id="lastName" name="lastName" onChange={changeLastNameHandler} placeholder='Your Last Name'/>
+          <input type="text" id="lastName" name="lastName" onChange={(event) => setUser({...user, lastName: event.target.value})} placeholder='Your Last Name'/>
 
           <label htmlFor='email'>Email</label>
-          <input type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" name="email" onChange={changeEmailHandler} placeholder='Your Email'/>
+          <input type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" name="email" onChange={(event) => setUser({...user, email: event.target.value})} placeholder='Your Email'/>
 
           <label htmlFor='password'>Password</label>
-          <input type="password" id="password" name="password" onChange={changePasswordHandler} placeholder='Your Password'/>
+          <input type="password" id="password" name="password" onChange={(event) => setUser({...user, password: event.target.value})} placeholder='Your Password'/>
 
           <label htmlFor='phone'>Phone Number</label>
-          <input type="tel" id="phone" name="phone" onChange={changePhoneHandler} placeholder='Your Phone Number'/>
+          <input type="tel" id="phone" name="phone" onChange={(event) => setUser({...user, phone: event.target.value})} placeholder='Your Phone Number'/>
 
           <label htmlFor='userStatus'> Status</label>
-          <input type="number" id="userStatus" name="userStatus" onChange={changeStatusHandler} placeholder='Your Status'/>
+          <input type="number" id="userStatus" name="userStatus" onChange={(event) => setUser({...user, userStatus: parseInt(event.target.value, 10)})} placeholder='Your Status'/>
 
           <button onClick={sendUser}>Register</button>
         </form>
