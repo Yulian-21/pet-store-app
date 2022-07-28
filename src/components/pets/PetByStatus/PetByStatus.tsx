@@ -15,7 +15,7 @@ const PetByStatus: FC = () => {
 
     const fetchPets = async () => {
         try {
-            const response = await axios.get<IPet[]>('https://petstore3.swagger.io/api/v3/pet/findByTags?tags=' + status)
+            const response = await axios.get<IPet[]>('https://petstore3.swagger.io/api/v3/pet/findByStatus?status=' + status)
             setPets(response.data);
         } catch (err) {
             alert(err)
@@ -28,7 +28,6 @@ const PetByStatus: FC = () => {
                 pets.map(pet => (
                     <div>
                         <h1> The page of {pet?.name} </h1>
-
                         <div>
                             <ul>
                                 {
