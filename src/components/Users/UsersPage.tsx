@@ -6,7 +6,7 @@ import { Controller } from 'react-hook-form';
 import { Form } from '../Form/Form';
 import { Button, TextField } from '@mui/material';
 import CustomInput from '../Form/CustomInput';
-import { promisify } from '../Api/UserResponse';
+import { promisify } from '../Api/FakeResponse';
 
 
 const UsersPage = () => {
@@ -76,6 +76,7 @@ export const CreateProduct = () => {
         return userInitialValue;
     };
 
+    
     const userInitialValue = {
         id: 1,
         userName: "JohnDoe22",
@@ -102,6 +103,7 @@ export const CreateProduct = () => {
                     <CustomInput control={control} name="phone" type="tel"/>
                     <CustomInput control={control} name="userStatus" type="number"/>
                     <Button type="submit">Submit</Button>
+                    <button type="reset">Reset</button>
                 </>
             )}
         </Form>
