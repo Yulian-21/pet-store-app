@@ -1,6 +1,7 @@
 import React, { FC, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Status } from './PetTypes/PetTypes'
+import AddPet from "./AddPet/AddPet"
 
 const PetsPage: FC = () => {
   const [petId, setPetId] = useState('')
@@ -28,6 +29,9 @@ const PetsPage: FC = () => {
           <option value={Status.Sold}>Sold</option>
         </select>
         <button onClick={() => navigation('/pets/byTag/' + petTag)}>Search</button>
+      </div>
+      <div>
+        <AddPet />
       </div>
     </div>
   )
