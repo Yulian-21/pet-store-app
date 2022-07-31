@@ -23,12 +23,13 @@ const PetsPage: FC = () => {
       </div>
       <div>
         <label htmlFor="status">Search By Status</label>
-        <select id="status" onChange={(changing) => setStatus(changing.target.value)}>
+        <select id="status" value={status} onChange={selectedStatus => setStatus(selectedStatus.target.value)}>
+          <option>-----</option>
           <option value={Status.Available}>Available</option>
           <option value={Status.Pending}>Pending</option>
           <option value={Status.Sold}>Sold</option>
         </select>
-        <button onClick={() => navigation('/pets/byTag/' + petTag)}>Search</button>
+        <button onClick={() => navigation('/pets/byStatus/' + status)}>Search</button>
       </div>
       <div>
         <AddPet />
