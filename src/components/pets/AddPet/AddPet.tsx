@@ -1,14 +1,13 @@
-import React, { useState } from 'react'
-import CustomInput from '../../Form/CustomInput'
-import { BASE_API_URL } from '../../../config';
-import { promisify } from '../../Api/FakeResponse';
-import { Form } from '../../Form/Form';
+import React from 'react';
 import { Button } from '@mui/material';
-import { ICategory, IPet, ITag } from '../PetTypes/PetTypes';
-import AddCategory from './AddCategory/AddCategory';
-import { Control, FieldValues } from 'react-hook-form';
+
+import { promisify } from '../../Api/FakeResponse';
+import { IPet, ITag } from '../PetTypes/PetTypes';
+import CustomInput from '../../Form/CustomInput';
+import { Form } from '../../Form/Form';
 import TagsGenerator from './TagsGenerator/TagsGenerator';
 import SelectCategory from './SelectCategory/SelectCategory';
+import { StyledForm } from './AddPet.styled';
 
 type handleData = {
     id: number,
@@ -35,7 +34,6 @@ const AddPet = () => {
             tags: data.tags
         }
 
-
         const result = await promisify(sendingData);
         console.log(result);
         return petInitialValue;
@@ -47,7 +45,7 @@ const AddPet = () => {
         id: 1,
         name: "Barsik",
         photoUrls: ["url1", "url2"],
-        category: { name: "Cat"},
+        category: { name: "Cat" },
         tags: [{ id: 1, name: "hairy" },
         { id: 2, name: "red" },
         { id: 3, name: "curly" },
@@ -60,25 +58,25 @@ const AddPet = () => {
         status: "pending"
     }
 
-//onUpdate={updateData}
+    //onUpdate={updateData}
     return (
-        <Form
+        <StyledForm
             onSubmit={handleSubmit}
             options={{ defaultValues: petInitialValue }}
         >
             {({ control }) => (
                 <>
                     <CustomInput control={control} name="id" id="id" type="number" />
-                    <CustomInput control={control} name="name" id="name" type="text"/> 
-                    <CustomInput control={control} name="photoUrls" id="photoUrls" type="text"/>
-                    <SelectCategory control={control} name="category"/>
-                    <CustomInput control={control} name="status" id="status" type="text"/>
-                    <TagsGenerator control={control} name="tags" id="tags" /> 
-                    <Button type="submit" sx={{color: "gold"}}>Submit</Button>
+                    <CustomInput control={control} name="name" id="name" type="text" />
+                    <CustomInput control={control} name="photoUrls" id="photoUrls" type="text" />
+                    <SelectCategory control={control} name="category" />
+                    <CustomInput control={control} name="status" id="status" type="text" />
+                    <TagsGenerator control={control} name="tags" id="tags" />
+                    <Button type="submit" sx={{ color: "gold" }}>Submit</Button>
                 </>
             )}
-        </Form>
-  )
+        </StyledForm>
+    )
 }
 
 export default AddPet;
