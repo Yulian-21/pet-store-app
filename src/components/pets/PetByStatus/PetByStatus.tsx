@@ -1,6 +1,7 @@
 import React, { FC, useEffect, useState } from 'react'
 import axios from 'axios'
 import { useParams, useNavigate } from 'react-router-dom'
+import  style from './PetByStatus.module.css'
 import { IPet, PetByStatusParams } from '../PetTypes/PetTypes';
 
 const PetByStatus: FC = () => {
@@ -12,7 +13,7 @@ const PetByStatus: FC = () => {
         fetchPets();
     }, [status])
 
-
+    
     const fetchPets = async () => {
         try {
             const response = await axios.get<IPet[]>('https://petstore3.swagger.io/api/v3/pet/findByStatus?status=' + status)
@@ -21,9 +22,10 @@ const PetByStatus: FC = () => {
             alert(err)
         }
     }
+    
 
     return (
-        <div>
+        <div className={style.sizeStyle}>
             {
                 pets.map(pet => (
                     <div>
