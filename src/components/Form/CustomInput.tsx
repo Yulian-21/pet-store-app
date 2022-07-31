@@ -6,29 +6,32 @@ type Props = {
     control: Control<FieldValues, any>;
     name: string;
     type: string;
+    id: string
+    value?: string;
 }
 
 const CustomInput = (props : Props) => {
 
-    const {control, name, type} = props
+    const {control, name, type, id} = props
 
     return (
         <Controller
             control={control}
             name={name}
             render={({
-                field: { onChange, onBlur, value, name, ref },
+                field: { onBlur, value, onChange, name, ref },
                 fieldState: { invalid, isTouched, isDirty, error },
                 formState,
             }) => (
                 <TextField
                     value={value}
                     type={type}
+                    style={{backgroundColor: 'rgba(255,255,255,0.5)', marginTop: '10px'}}
                     onChange={onChange}
                     onBlur={onBlur}
                     name={name}
                     required
-                    id="outlined-required"
+                    id={id}
                     label={name}
                 />
             )}
