@@ -2,6 +2,8 @@ import React, { FC, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Status } from './PetTypes/PetTypes'
 import AddPet from "./AddPet/AddPet"
+import UpdatePet from "./UpdatePet/UpdatePet"
+import UpdatePetById from './UpdatePetById/UpdatePetById'
 
 const PetsPage: FC = () => {
   const [petId, setPetId] = useState('')
@@ -33,6 +35,12 @@ const PetsPage: FC = () => {
       </div>
       <div>
         <AddPet />
+      </div>
+      <div>
+        <UpdatePet />
+      </div>
+      <div>
+        <UpdatePetById />
       </div>
     </div>
   )
