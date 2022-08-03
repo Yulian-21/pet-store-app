@@ -2,21 +2,12 @@ import React from 'react';
 import { Button } from '@mui/material';
 
 import { promisify } from '../../Api/FakeResponse';
-import { IPet, ITag } from '../PetTypes/PetTypes';
+import { handleData, IPet, ITag } from '../PetTypes/PetTypes';
 import CustomInput from '../../Form/CustomInput';
 import { Form } from '../../Form/Form';
-import TagsGenerator from './TagsGenerator/TagsGenerator';
-import SelectCategory from './SelectCategory/SelectCategory';
+import TagsGenerator from '../PetsComponents/TagsGenerator/TagsGenerator';
+import SelectCategory from '../PetsComponents/SelectCategory/SelectCategory';
 import { StyledForm } from './AddPet.styled';
-
-type handleData = {
-    id: number,
-    name: string,
-    photoUrls: string,
-    category: string,
-    status: string,
-    tags: ITag[]
-}
 
 const AddPet = () => {
 
