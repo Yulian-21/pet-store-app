@@ -8,7 +8,7 @@
     "f f f";
 
   margin: 0 auto;
-  grid-template-rows: 80px 1fr 110px;
+  grid-template-rows: 150px 1fr 100px;
   grid-template-columns: 2fr 10fr 1fr;
   grid-gap: 10px;
   background-color: white;
@@ -16,10 +16,9 @@
 
 .app-wrapper-content {
   grid-area: c;
-  background-color: #0cbaba;
-  background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
+  background-color: white;
 
-  color: white;
+  color: black;
   height: 800px;
 }
 .app-wrapper-content img {
