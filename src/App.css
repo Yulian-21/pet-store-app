@@ -8,7 +8,7 @@
     "f f f";
 
   margin: 0 auto;
-  grid-template-rows: 80px 1fr 100px;
+  grid-template-rows: 80px 1fr 200px;
   grid-template-columns: 2fr 10fr 1fr;
   grid-gap: 10px;
   background-color: white;
