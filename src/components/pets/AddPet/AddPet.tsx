@@ -8,6 +8,9 @@ import { Form } from '../../Form/Form';
 import TagsGenerator from '../PetsComponents/TagsGenerator/TagsGenerator';
 import SelectCategory from '../PetsComponents/SelectCategory/SelectCategory';
 import { StyledForm } from './AddPet.styled';
+import SelectStatus from '../PetsComponents/SelectStatus/SelectStatus';
+import axios from 'axios';
+import { BASE_API_URL } from '../../../config';
 
 const AddPet = () => {
 
@@ -25,9 +28,12 @@ const AddPet = () => {
             tags: data.tags
         }
 
-        const result = await promisify(sendingData);
-        console.log(result);
-        return petInitialValue;
+        await axios.post(BASE_API_URL + "/pet", sendingData)
+            .then(response => { alert(response.status); })
+            .catch(err => { alert(err.message) });
+        // const result = await promisify(sendingData);
+        // console.log(result);
+        // return petInitialValue;
     };
 
 
@@ -46,7 +52,7 @@ const AddPet = () => {
         { id: 7, name: "fat" },
         { id: 8, name: "tall" },
         { id: 9, name: "beautiful" }],
-        status: "pending"
+        status: "Pending"
     }
 
     //onUpdate={updateData}
@@ -61,7 +67,7 @@ const AddPet = () => {
                     <CustomInput control={control} name="name" id="name" type="text" />
                     <CustomInput control={control} name="photoUrls" id="photoUrls" type="text" />
                     <SelectCategory control={control} name="category" />
-                    <CustomInput control={control} name="status" id="status" type="text" />
+                    <SelectStatus control={control} name="status" />
                     <TagsGenerator control={control} name="tags" id="tags" />
                     <Button type="submit" sx={{ color: "gold" }}>Submit</Button>
                 </>
