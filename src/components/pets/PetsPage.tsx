@@ -4,6 +4,8 @@ import { Status } from './PetTypes/PetTypes'
 import AddPet from "./AddPet/AddPet"
 import UpdatePet from "./UpdatePet/UpdatePet"
 import UpdatePetById from './UpdatePetById/UpdatePetById'
+import DeletePet from './DeletePet/DeletePet'
+import AddImage from './AddImage/AddImage';
 
 const PetsPage: FC = () => {
   const [petId, setPetId] = useState('')
@@ -41,6 +43,12 @@ const PetsPage: FC = () => {
       </div>
       <div>
         <UpdatePetById />
+      </div>
+      <div>
+        <DeletePet />
+      </div>
+      <div>
+        <AddImage />
       </div>
     </div>
   )
