@@ -40,7 +40,7 @@ const Footer = () => {
               </Box>
             </Grid>
             <Grid item xs={12} sm={4}>
-              <Box borderBottom={1}>Messages</Box>
+              <Box borderBottom={1}>Pets</Box>
               <Box>
                 <Link href='/' color='inherit'>
                   Backup
@@ -51,15 +51,10 @@ const Footer = () => {
                   History
                 </Link>
               </Box>
-              <Box>
-                <Link href='/' color='inherit'>
-                  Roll
-                </Link>
-              </Box>
             </Grid>
           </Grid>
           <Box textAlign="center" pt={{ xs: 5, sm: 10 }} pb={{ xs: 5, sm: 0 }}>
-            Pet Shop &reg: {new Date().getFullYear()}
+            Pet Shop {new Date().getFullYear()}
           </Box>
         </Container>
       </Box>
