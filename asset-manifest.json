@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/pet-store-app/static/css/main.be5af7aa.css",
-    "main.js": "/pet-store-app/static/js/main.b28a2d03.js",
+    "main.js": "/pet-store-app/static/js/main.a19be084.js",
     "static/js/787.d22c4eda.chunk.js": "/pet-store-app/static/js/787.d22c4eda.chunk.js",
     "index.html": "/pet-store-app/index.html",
     "main.be5af7aa.css.map": "/pet-store-app/static/css/main.be5af7aa.css.map",
-    "main.b28a2d03.js.map": "/pet-store-app/static/js/main.b28a2d03.js.map",
+    "main.a19be084.js.map": "/pet-store-app/static/js/main.a19be084.js.map",
     "787.d22c4eda.chunk.js.map": "/pet-store-app/static/js/787.d22c4eda.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.be5af7aa.css",
-    "static/js/main.b28a2d03.js"
+    "static/js/main.a19be084.js"
   ]
 }
