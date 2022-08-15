@@ -2,17 +2,17 @@ import { TextField } from '@mui/material'
 import React from 'react'
 import { Control, Controller, FieldValues } from 'react-hook-form'
 
-type Props = { 
+type Props = {
     control: Control<FieldValues, any>;
     name: string;
-    type: string;
+    type?: string;
     id: string
     value?: string;
 }
 
-const CustomInput = (props : Props) => {
+const CustomInput = (props: Props) => {
 
-    const {control, name, type, id} = props
+    const { control, name, type, id } = props
 
     return (
         <Controller
@@ -26,7 +26,7 @@ const CustomInput = (props : Props) => {
                 <TextField
                     value={value}
                     type={type}
-                    style={{backgroundColor: 'rgba(255,255,255,0.5)', marginTop: '10px'}}
+                    style={{ backgroundColor: 'rgba(255,255,255,0.5)', marginTop: '10px' }}
                     onChange={onChange}
                     onBlur={onBlur}
                     name={name}
