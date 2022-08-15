@@ -1,5 +1,6 @@
+import React from 'react';
 import PetsPage from './components/Pets/PetsPage';
-import {Route, Routes} from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import PetItemPage from './components/Pets/PetItem/PetItemPage';
 import StorePage from './components/Orders/StorePage';
 import OrderItem from './components/Orders/OrderItem/OrderItem';
@@ -15,15 +16,15 @@ function App() {
     <div className='app-wrapper'>
       <Header />
       <div className="app-wrapper-content">
-      <Routes>
-      <Route element={<PetsPage />} path={'/pets'} />
-      <Route element={<PetItemPage />} path={'/pets/:id'} />
-      <Route element={<StorePage />} path={'/orders'} />
-      <Route element={<OrderItem />} path={'/orders/:id'} />
-      <Route element={<UsersPage />} path={'/users'} />
-      <Route element={<PetsByTagPage/>} path={'/pets/byTag/:tag'} />
-      <Route element={<PetByStatus />} path={'/pets/byStatus/:status'} />
-      </Routes>
+        <Routes>
+          <Route element={<PetsPage />} path={'/pets'} />
+          <Route element={<PetItemPage />} path={'/pets/:id'} />
+          <Route element={<StorePage />} path={'/orders'} />
+          <Route element={<OrderItem />} path={'/orders/:id'} />
+          <Route element={<UsersPage />} path={'/users'} />
+          <Route element={<PetsByTagPage />} path={'/pets/byTag/:tag'} />
+          <Route element={<PetByStatus />} path={'/pets/byStatus/:status'} />
+        </Routes>
       </div>
       <Footer />
     </div>
